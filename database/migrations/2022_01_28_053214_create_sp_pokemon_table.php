@@ -21,7 +21,6 @@ class CreateSpPokemonTable extends Migration
             $table->string('name');
             $table->string('type');
             $table->json('evolutions');
-            $table->timestamps();
         });
     }
 
