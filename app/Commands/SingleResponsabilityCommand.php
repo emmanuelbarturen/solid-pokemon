@@ -43,11 +43,18 @@ class SingleResponsabilityCommand extends Command
             // Utiliza una clase que contiene la responsabilidad de guardar en la base de datos
             $db = new Database($pokemon);
             $db->save();
+            $this->info("✅ Clase Pokemón define attributos");
+            $this->info("✅ Clase Pokemón permite el acceso a los atributos");
+            $this->info("✅ Clase Database tiene la responsabilidad de acceder a la base de datos");
+
         } else {
             // Creamos la instancia de la clase pokemon
             $pokemon = new PokemonBad("Eevee", "normal", ["Jolteon", "Vaporeon", "Flareon"]);
             // Utiliza la misma clase para guardar en la base de datos
             $pokemon->saveData($pokemon);
+            $this->info("✅ Clase Pokemón define attributos");
+            $this->info("✅ Clase Pokemón permite el acceso a los atributos");
+            $this->error('❌ Realiza operaciones sobre una base de datos');
         }
     }
 }
