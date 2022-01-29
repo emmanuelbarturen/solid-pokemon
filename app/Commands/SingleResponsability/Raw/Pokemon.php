@@ -61,6 +61,14 @@ class Pokemon
     }
 
     /**
+     * @return string
+     */
+    public function serialize(): string
+    {
+        return ">>> Pokemon: {$this->name}, Type: {$this->type}, Evolutions:" . implode(',', $this->evolutions);
+    }
+
+    /**
      * Guarda los datos del pokemon en la base de datos y genera un log
      * @param Pokemon $pokemon
      * @return void
@@ -76,7 +84,7 @@ class Pokemon
 
         # Generando el log
         $out = new ConsoleOutput();
-        $out->writeln(">>> Pokemon: {$this->name}, Type: {$this->type}, Evolutions:" . implode(',', $this->evolutions));
+        $out->writeln($this->serialize());
     }
 
 }

@@ -2,7 +2,7 @@
 
 namespace App\Commands\SingleResponsability\Refactored\Logger;
 
-interface Logger
+interface PokeLogger
 {
     public function log(string $message);
 }

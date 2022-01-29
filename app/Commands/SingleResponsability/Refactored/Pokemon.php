@@ -57,4 +57,11 @@ class Pokemon
         return $this->evolutions;
     }
 
+    /**
+     * @return string
+     */
+    public function serialize(): string
+    {
+        return ">>> Pokemon: {$this->name}, Type: {$this->type}, Evolutions:" . implode(',', $this->evolutions);
+    }
 }
