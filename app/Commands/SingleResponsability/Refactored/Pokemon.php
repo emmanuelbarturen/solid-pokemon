@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Pokemon\SingleResponsability;
-
-use Illuminate\Support\Facades\DB;
+namespace App\Commands\SingleResponsability\Refactored;
 
 /**
- * class PokemonBad
+ * class PokemonGood
  */
-class PokemonBad
+class Pokemon
 {
 
     /**
@@ -57,19 +55,6 @@ class PokemonBad
     public function getEvolutions(): array
     {
         return $this->evolutions;
-    }
-
-    /**
-     * @param PokemonBad $pokemon
-     * @return void
-     */
-    public function saveData(PokemonBad $pokemon)
-    {
-        DB::table('sp_pokemon')->insert([
-            'name' => $pokemon->getName(),
-            'type' => $pokemon->getType(),
-            'evolutions' => implode(',', $pokemon->getEvolutions())
-        ]);
     }
 
 }

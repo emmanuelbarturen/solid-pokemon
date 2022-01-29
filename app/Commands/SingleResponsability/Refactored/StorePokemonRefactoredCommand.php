@@ -1,30 +1,29 @@
 <?php
 
-namespace App\Commands;
+namespace App\Commands\SingleResponsability\Refactored;
 
-use App\Pokemon\SingleResponsability\Database;
-use App\Pokemon\SingleResponsability\PokemonBad;
-use App\Pokemon\SingleResponsability\PokemonGood;
+use App\Commands\SingleResponsability\Refactored\Database;
+use App\Commands\SingleResponsability\Refactored\Pokemon;
 use LaravelZero\Framework\Commands\Command;
 
 /**
- * class SingleResponsabilityCommand
+ * class StorePokemonRawCommand
  */
-class SingleResponsabilityCommand extends Command
+class StorePokemonRefactoredCommand extends Command
 {
     /**
      * The signature of the command.
      *
      * @var string
      */
-    protected $signature = 'sp:evee {--good}';
+    protected $signature = 'srp:store-pokemon-refactored';
 
     /**
      * The description of the command.
      *
      * @var string
      */
-    protected $description = 'Una Clase solo debe tener solo una razón para cambiar, esto quiere decir que una clase solo debe contar con una sola responsabilidad';
+    protected $description = 'Al guardar el registro de un pokemon, debemos generar un log';
 
     /**
      * Single Responsability Principle
@@ -39,7 +38,7 @@ class SingleResponsabilityCommand extends Command
     {
         if ($this->option('good')) {
             // Creamos la instancia de la clase pokemon
-            $pokemon = new PokemonGood("Eevee", "normal", ["Jolteon", "Vaporeon", "Flareon"]);
+            $pokemon = new Pokemon("Eevee", "normal", ["Jolteon", "Vaporeon", "Flareon"]);
             // Utiliza una clase que contiene la responsabilidad de guardar en la base de datos
             $db = new Database($pokemon);
             $db->save();
@@ -49,7 +48,7 @@ class SingleResponsabilityCommand extends Command
 
         } else {
             // Creamos la instancia de la clase pokemon
-            $pokemon = new PokemonBad("Eevee", "normal", ["Jolteon", "Vaporeon", "Flareon"]);
+            $pokemon = new Pokemon("Eevee", "normal", ["Jolteon", "Vaporeon", "Flareon"]);
             // Utiliza la misma clase para guardar en la base de datos
             $pokemon->saveData($pokemon);
             $this->info("✅ Clase Pokemón define attributos");

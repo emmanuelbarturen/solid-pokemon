@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Pokemon\SingleResponsability;
+namespace App\Commands\SingleResponsability\Refactored;
 
 use Illuminate\Support\Facades\DB;
 
@@ -10,14 +10,14 @@ use Illuminate\Support\Facades\DB;
 class Database
 {
     /**
-     * @var PokemonGood
+     * @var Pokemon
      */
     private $pokemon;
 
     /**
-     * @param PokemonGood $pokemon
+     * @param Pokemon $pokemon
      */
-    public function __construct(PokemonGood $pokemon)
+    public function __construct(Pokemon $pokemon)
     {
         $this->pokemon = $pokemon;
     }
