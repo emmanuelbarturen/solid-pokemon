@@ -33,12 +33,13 @@ class StorePokemonRawCommand extends Command
         $flareon = new Pokemon("Flareon", "Fire");
         $jolteon = new Pokemon("Jolteon", "Electric");
         $vaporeon = new Pokemon("Vaporeon", "Water");
+        $hunter = new Pokemon("Hunter", "Ghost");
 
         // Creamos una instancia de la clase ProcessAttack
         $processAttack = new ProcessAttack();
 
         // invocamos al método allPokemonAttack y enviamos las instancia de la clase pokemon
-        $attacks = $processAttack->allPokemonAttack([$flareon, $jolteon, $vaporeon]);
+        $attacks = $processAttack->allPokemonAttack([$flareon, $jolteon, $vaporeon, $hunter]);
         foreach ($attacks as $attack) {
             $this->info($attack);
         }

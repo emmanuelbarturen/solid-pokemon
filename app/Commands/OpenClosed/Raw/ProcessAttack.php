@@ -29,7 +29,7 @@ class ProcessAttack
                     $attack = "Ataque base";
             }
 
-            $output[] = $attack;
+            $output[] = $pokemon->getName() . ' ➜ ' . $attack;
         }
 
         return $output;
