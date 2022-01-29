@@ -33,11 +33,11 @@ class StorePokemonRawCommand extends Command
         // Creamos la instancia de la clase pokemon
         $pokemon = new Pokemon("Eevee", "normal", ["Jolteon", "Vaporeon", "Flareon"]);
 
-
         // Utiliza la misma clase para guardar en la base de datos
         $pokemon->saveData($pokemon);
-        #$this->info("✅ Clase Pokemón define attributos");
-        #$this->info("✅ Clase Pokemón permite el acceso a los atributos");
-        #$this->error('❌ Realiza operaciones sobre una base de datos');
+        $this->info("✅ Clase Pokemón define attributos");
+        $this->info("✅ Clase Pokemón permite el acceso a los atributos");
+        $this->error('❌ Realiza operaciones sobre una base de datos');
+        $this->error('❌ Se acopla a otras dependencias');
     }
 }
