@@ -34,6 +34,8 @@ class Pokemon
         $this->name = $name;
         $this->type = $type;
         $this->evolutions = $evolutions;
+        // Utiliza la misma clase para guardar en la base de datos
+        $this->saveData();
     }
 
     /**
@@ -70,16 +72,15 @@ class Pokemon
 
     /**
      * Guarda los datos del pokemon en la base de datos y genera un log
-     * @param Pokemon $pokemon
      * @return void
      */
-    public function saveData(Pokemon $pokemon)
+    public function saveData()
     {
         # Guardando en la base de datos
         DB::table('sp_pokemon')->insert([
-            'name' => $pokemon->getName(),
-            'type' => $pokemon->getType(),
-            'evolutions' => implode(',', $pokemon->getEvolutions())
+            'name' => $this->getName(),
+            'type' => $this->getType(),
+            'evolutions' => implode(',', $this->getEvolutions())
         ]);
 
         # Generando el log
