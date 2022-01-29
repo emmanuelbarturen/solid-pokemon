@@ -3,6 +3,7 @@
 namespace App\Commands\SingleResponsability\Raw;
 
 use Illuminate\Support\Facades\DB;
+use Symfony\Component\Console\Output\ConsoleOutput;
 
 /**
  * class Pokemon
@@ -74,11 +75,8 @@ class Pokemon
         ]);
 
         # Generando el log
-        $out = new \Symfony\Component\Console\Output\ConsoleOutput();
-        $out->writeln("--------- response ----------");
-        $out->writeln("Pokemon: {$this->name}");
-        $out->writeln("Type: {$this->type}");
-        $out->writeln("Evolutions:" . implode(',', $this->evolutions));
+        $out = new ConsoleOutput();
+        $out->writeln(">>> Pokemon: {$this->name}, Type: {$this->type}, Evolutions:" . implode(',', $this->evolutions));
     }
 
 }

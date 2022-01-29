@@ -35,12 +35,4 @@ class Database
             'evolutions' => implode(',', $pokemon->getEvolutions())
         ]);
     }
-
-    /**
-     * @return void
-     */
-    public function find()
-    {
-        //TODO
-    }
 }
