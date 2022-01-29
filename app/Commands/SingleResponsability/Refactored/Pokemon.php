@@ -3,7 +3,7 @@
 namespace App\Commands\SingleResponsability\Refactored;
 
 /**
- * class PokemonGood
+ * class Pokemon
  */
 class Pokemon
 {
