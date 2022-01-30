@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Commands\OpenClosed\Raw;
+namespace App\Commands\OpenClosed\Refactored;
 
 /**
  * class ProcessAttack

@@ -7,7 +7,7 @@ use LaravelZero\Framework\Commands\Command;
 /**
  * class StorePokemonRawCommand
  */
-class StorePokemonRawCommand extends Command
+class AttackPokemonRawCommand extends Command
 {
     /**
      * The signature of the command.
@@ -33,7 +33,7 @@ class StorePokemonRawCommand extends Command
         $flareon = new Pokemon("Flareon", "Fire");
         $jolteon = new Pokemon("Jolteon", "Electric");
         $vaporeon = new Pokemon("Vaporeon", "Water");
-        $hunter = new Pokemon("Hunter", "Ghost");
+        $hunter = new Pokemon("Hunter", "Ghost"); // Este no está implementado
 
         // Creamos una instancia de la clase ProcessAttack
         $processAttack = new ProcessAttack();
