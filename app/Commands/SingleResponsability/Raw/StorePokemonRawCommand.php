@@ -22,9 +22,12 @@ class StorePokemonRawCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Al guardar el registro de un pokemon, debemos generar un log';
+    protected $description = 'Single Responsability - Al guardar el registro de un pokemon, debemos generar un log';
 
     /**
+     * La clase Pokemon, al ser instanciada, guarda en base de datos, además genera un log.
+     * Al contar con múltiples responsabilidades se complica aplicar cambios, ya que es posible que insertemos un error
+     * porque hacer un cambio de alguna responsabilidad, podría afectar a otras sin que nosotros lo sepamos.
      *
      * @return void
      */

@@ -21,10 +21,12 @@ class AttackPokemonRawCommand extends Command
      *
      * @var string
      */
-    protected $description = '';
+    protected $description = 'Open/Close Raw Attack Pokemon';
 
     /**
-     *
+     * En este ejemplo, para agregar un nuevo pokemon tendríamos que modificar la función allPokemonAttack
+     * con una nueva opción, ya que está abierta a cambios. Esto genera el riesgo de error porque estaríamos
+     * modificando código existente, además aumentando la complejidad de la función.
      * @return void
      */
     public function handle()

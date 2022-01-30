@@ -14,16 +14,19 @@ class AttackPokemonRefactorCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'ocp:attack-pokemon-refactor';
+    protected $signature = 'ocp:attack-pokemon-refactored';
 
     /**
      * The description of the command.
      *
      * @var string
      */
-    protected $description = '';
+    protected $description = 'Open/Close Attack Pokemon Refactored';
 
     /**
+     * En esta versión, la función allPokemonAttack no se modifica, ya que todas las clases y subclases que ingresan al array deben
+     * extender de la clase Pokemon quien tiene una función que obtiene el ataque. Esto hacer que la función allPokemonAttack sea
+     * abierto para extender pero cerrado para ser modificado.
      * @return void
      */
     public function handle()

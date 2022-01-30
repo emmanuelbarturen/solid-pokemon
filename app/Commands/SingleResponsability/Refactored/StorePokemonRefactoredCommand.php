@@ -22,9 +22,11 @@ class StorePokemonRefactoredCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Al guardar el registro de un pokemon, debemos generar un log. Versión refactorizada';
+    protected $description = 'Single Responsability - Al guardar el registro de un pokemon, debemos generar un log. Versión refactorizada';
 
     /**
+     * En esta versión, la clase Pokemon solo se encarga de definir al objeto.
+     * La clase Database, de guardar en base de datos y PokeLogger de generar el log.
      * @return void
      * @throws \Illuminate\Contracts\Container\BindingResolutionException
      */
