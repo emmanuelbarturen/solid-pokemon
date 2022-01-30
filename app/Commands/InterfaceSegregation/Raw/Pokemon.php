@@ -43,20 +43,4 @@ class Pokemon
     {
         return $this->type;
     }
-
-    /**
-     * @return string
-     */
-    public function canFly(): string
-    {
-        return "Puedo volar";
-    }
-
-    /**
-     * @return string
-     */
-    public function canSwim(): string
-    {
-        return "Puedo Nadar";
-    }
 }

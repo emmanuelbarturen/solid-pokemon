@@ -2,10 +2,12 @@
 
 namespace App\Commands\InterfaceSegregation\Raw;
 
+use Exception;
+
 /**
  * class Charizar
  */
-class Charizard extends Pokemon
+class Charizard extends Pokemon implements MoveInterface
 {
     /**
      * constructor
@@ -24,10 +26,12 @@ class Charizard extends Pokemon
     }
 
     /**
+     * Este método no debería ser heredado
      * @return string
+     * @throws Exception
      */
     public function canSwim(): string
     {
-        return "No puedo nadar por que soy de tipo " . $this->getType();
+        throw new Exception("Charizard no puede nadar");
     }
 }

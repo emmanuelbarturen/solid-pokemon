@@ -2,25 +2,19 @@
 
 namespace App\Commands\InterfaceSegregation\Refactored;
 
+use App\Commands\InterfaceSegregation\Refactored\Contracts\PokemonWaterInterface;
+
 /**
  * class Blastoise
  */
-class Blastoise extends Pokemon
+class Blastoise extends Pokemon implements PokemonWaterInterface
 {
     /**
      * constructor
      */
     public function __construct()
     {
-        parent::__construct('Charizard', 'Fire');
-    }
-
-    /**
-     * @return string
-     */
-    public function canFly(): string
-    {
-        return "No puedo volar por que soy de tipo " . $this->getType();
+        parent::__construct('Blastoise', 'Water');
     }
 
     /**
@@ -28,6 +22,6 @@ class Blastoise extends Pokemon
      */
     public function canSwim(): string
     {
-        return 'Soy   ' . $this->getName() . ' y puedo nadar.';
+        return $this->getName() . ' puedo nadar.';
     }
 }

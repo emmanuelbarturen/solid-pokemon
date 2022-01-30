@@ -2,10 +2,12 @@
 
 namespace App\Commands\InterfaceSegregation\Refactored;
 
+use App\Commands\InterfaceSegregation\Refactored\Contracts\PokemonFlyInterface;
+
 /**
  * class Charizar
  */
-class Charizard extends Pokemon
+class Charizard extends Pokemon implements PokemonFlyInterface
 {
     /**
      * constructor
@@ -21,13 +23,5 @@ class Charizard extends Pokemon
     public function canFly(): string
     {
         return $this->getName() . " Puedo volar";
-    }
-
-    /**
-     * @return string
-     */
-    public function canSwim(): string
-    {
-        return "No puedo nadar por que soy de tipo " . $this->getType();
     }
 }

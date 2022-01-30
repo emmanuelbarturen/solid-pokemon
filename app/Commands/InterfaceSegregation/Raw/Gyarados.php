@@ -2,28 +2,26 @@
 
 namespace App\Commands\InterfaceSegregation\Raw;
 
-use Exception;
-
 /**
- * class Blastoise
+ * class Gyarados
  */
-class Blastoise extends Pokemon implements MoveInterface
+class Gyarados extends Pokemon implements MoveInterface
 {
+
     /**
      * constructor
      */
     public function __construct()
     {
-        parent::__construct('Blastoise', 'Water');
+        parent::__construct('Gyarados', 'Psychic');
     }
 
     /**
      * @return string
-     * @throws Exception
      */
     public function canFly(): string
     {
-        throw new Exception("No puedo volar por que soy de tipo " . $this->getType());
+        return $this->getName() . " Puedo volar";
     }
 
     /**
@@ -31,6 +29,6 @@ class Blastoise extends Pokemon implements MoveInterface
      */
     public function canSwim(): string
     {
-        return 'Soy   ' . $this->getName() . ' y puedo nadar.';
+        return $this->getName() . " Puedo nadar";
     }
 }
