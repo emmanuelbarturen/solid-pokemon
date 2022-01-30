@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Commands\DependencyInversion\Pokedex\Raw;
+namespace App\Commands\DependencyInversion\Pokedex\Refactored\Services;
 
 use Illuminate\Support\Facades\Http;
 
 /**
  * class ApiPokemonService
  */
-class ApiPokemon
+class PokemonApiServiceService implements PokemonDataService
 {
     /**
      * @param string $pokemon
