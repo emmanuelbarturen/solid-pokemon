@@ -17,11 +17,12 @@ class CanFlyRawCommand extends Command
     protected $signature = 'ls:can-fly-pokemon-raw';
 
     /**
-     * The description of the command.
+     * La clase Charmander no debería heredar de pokemon ya que tiene una función que no puede ser implementada por Charmander (canFly).
+     * Esto obliga a sobreescribir la función canFly para asegurar que no haya mal uso.
      *
      * @var string
      */
-    protected $description = '';
+    protected $description = 'Liskov Substitution: Can Fly Pokemon Raw';
 
     /**
      *
@@ -29,11 +30,8 @@ class CanFlyRawCommand extends Command
      */
     public function handle()
     {
-        $this->error('❌ La clase charmander no puede utilizar el método canFly');
-        $this->error('❌ Uno de las Sub-Clases no puede ser utilizado como una Clase Padre');
-
-        // Creamos la instancia de la clase Charizard
-        $charizard = new Charizard();
+        // Creamos la instancia de la clase Padre (Pokemon)
+        $charizard = new Pokemon("Charizard", "Fire");
         $this->info('Hola soy: ' . $charizard->getName());
         $this->info('Soy del tipo: ' . $charizard->getType());
         $this->info('Además ' . $charizard->canFly());
@@ -44,6 +42,6 @@ class CanFlyRawCommand extends Command
         $charmander = new Charmander();
         $this->info('Hola soy: ' . $charmander->getName());
         $this->info('Soy del tipo: ' . $charmander->getType());
-        $this->info('Además ' . $charmander->canFly());
+        $this->info('Además ' . $charmander->canFly()); // Error: No puedo volar
     }
 }

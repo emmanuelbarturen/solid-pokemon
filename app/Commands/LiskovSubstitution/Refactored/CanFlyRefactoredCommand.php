@@ -17,11 +17,12 @@ class CanFlyRefactoredCommand extends Command
     protected $signature = 'ls:can-fly-pokemon-refactored';
 
     /**
-     * The description of the command.
+     * La herencia de la clase Charmander y Charizard fueron correctamente escogidas porque ambas clases cumplen las
+     * implementaciones de todos los métodos de sus clases padres
      *
      * @var string
      */
-    protected $description = '';
+    protected $description = 'Liskov Substitution - Can Fly Pokemon Refactored';
 
     /**
      *
@@ -29,7 +30,7 @@ class CanFlyRefactoredCommand extends Command
      */
     public function handle()
     {
-        // Creamos la instancia de la clase Charizard
+        // Creamos la instancia de la clase Charizard y mostramos todos sus atributos
         $charizard = new Charizard();
         $this->info('Hola soy: ' . $charizard->getName());
         $this->info('Soy del tipo: ' . $charizard->getType());
@@ -37,9 +38,10 @@ class CanFlyRefactoredCommand extends Command
 
         $this->info('--------------------------------');
 
-        // Creamos la instancia de la clase Charmander
+        // Creamos la instancia de la clase Charmander y mostramos todos sus atributos
         $charmander = new Charmander();
         $this->info('Hola soy: ' . $charmander->getName());
         $this->info('Soy del tipo: ' . $charmander->getType());
+        // Ya no llamamos al método canFly() porque no lo tiene implementado ni su clase padre
     }
 }
