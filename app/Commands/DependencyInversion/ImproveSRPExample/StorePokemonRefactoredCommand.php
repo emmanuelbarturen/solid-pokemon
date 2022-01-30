@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Commands\SingleResponsability\Refactored;
+namespace App\Commands\DependencyInversion\ImproveSRPExample;
 
+use App\Commands\DependencyInversion\ImproveSRPExample\Logger\PokeLogger;
 use LaravelZero\Framework\Commands\Command;
 
 /**
@@ -14,19 +15,19 @@ class StorePokemonRefactoredCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'srp:store-pokemon-refactored';
+    protected $signature = 'di:improve-store-pokemon';
 
     /**
      * The description of the command.
      *
      * @var string
      */
-    protected $description = 'Single Responsability - Al guardar el registro de un pokemon, debemos generar un log. Versión refactorizada';
+    protected $description = 'Dependency inversion - Al guardar el registro de un pokemon, debemos generar un log. Versión con multiples loggers';
 
     /**
-     * En esta versión, la clase Pokemon solo se encarga de definir al objeto.
-     * La clase Database, de guardar en base de datos y PokeLogger de generar el log.
+     * En esta versión, la clase Pokelogger, al ser una libreríá externa, tiene el riesgo de que en alguna
      * @return void
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
      */
     public function handle()
     {
@@ -37,9 +38,8 @@ class StorePokemonRefactoredCommand extends Command
         $db = new Database($pokemon);
         $db->save();
 
-        // Utiliza una clase que contiene la responsabilidad de generar el log
-        $logger = new PokeLogger();
-        $logger->log($pokemon->serialize());
+        // Ahora utiliza una interfaz que contiene la responsabilidad de guardar en el log
+        app()->make(PokeLogger::class)->log($pokemon->serialize());
 
         $this->info("✅ Clase Pokemón define attributos");
         $this->info("✅ Clase Pokemón permite el acceso a los atributos");

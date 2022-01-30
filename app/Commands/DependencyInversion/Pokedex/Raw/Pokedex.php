@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Commands\DependencyInversion\Raw;
+namespace App\Commands\DependencyInversion\Pokedex\Raw;
 
 /**
  * class Pokedex

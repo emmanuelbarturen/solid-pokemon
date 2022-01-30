@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Commands\SingleResponsability\Refactored\Logger;
+namespace App\Commands\SingleResponsability\Refactored;
 
 use Symfony\Component\Console\Output\ConsoleOutput;
 
 /**
- * class ConsoleLogger
+ * class PokeLogger
  */
-class ConsolePokeLogger implements PokeLogger
+class PokeLogger
 {
     /**
      * @var ConsoleOutput
@@ -15,11 +15,10 @@ class ConsolePokeLogger implements PokeLogger
     private $output;
 
     /**
-     * @param ConsoleOutput $output
      */
-    public function __construct(ConsoleOutput $output)
+    public function __construct()
     {
-        $this->output = $output;
+        $this->output = new ConsoleOutput();
     }
 
 

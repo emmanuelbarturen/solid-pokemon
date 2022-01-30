@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Commands\SingleResponsability\Refactored\Logger;
+namespace App\Commands\DependencyInversion\ImproveSRPExample\Logger;
 
 use Illuminate\Support\Facades\DB;
 
