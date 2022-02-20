@@ -14,7 +14,7 @@ class StorePokemonRefactoredCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'srp:store-pokemon-refactored';
+    protected $signature = 'single-responsability:refactored-store-pokemon';
 
     /**
      * The description of the command.

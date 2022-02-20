@@ -41,7 +41,5 @@ class PokedexRawCommand extends Command
         foreach ($responses as $response) {
             $this->info($response);
         }
-        $this->error('❌ Se cuenta con una dependencia directa');
-        $this->error('❌ La clase pokedex no sabe como se implementa la clase ApiPokemonService');
     }
 }

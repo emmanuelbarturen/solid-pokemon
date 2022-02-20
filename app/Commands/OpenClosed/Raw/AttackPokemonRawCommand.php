@@ -5,7 +5,7 @@ namespace App\Commands\OpenClosed\Raw;
 use LaravelZero\Framework\Commands\Command;
 
 /**
- * class StorePokemonRawCommand
+ * class StorePokemonWrongCommand
  */
 class AttackPokemonRawCommand extends Command
 {

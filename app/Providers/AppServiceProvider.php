@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Commands\DependencyInversion\ImproveSRPExample\Logger\ConsolePokeLogger;
+use App\Commands\DependencyInversion\ImproveSRPExample\Logger\DatabasePokeLogger;
 use App\Commands\DependencyInversion\ImproveSRPExample\Logger\PokeLogger;
 use App\Commands\DependencyInversion\Pokedex\Refactored\Services\PokemonApiServiceService;
 use App\Commands\DependencyInversion\Pokedex\Refactored\Services\PokemonDataService;
@@ -32,7 +33,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(PokeLogger::class, ConsolePokeLogger::class);
-        $this->app->bind(PokemonDataService::class, PokemonDataServiceHardcodedService::class);
+        $this->app->bind(PokeLogger::class, DatabasePokeLogger::class);
+        $this->app->bind(PokemonDataService::class, PokemonApiServiceService::class);
     }
 }

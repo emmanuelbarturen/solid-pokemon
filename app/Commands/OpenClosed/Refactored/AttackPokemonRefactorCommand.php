@@ -5,7 +5,7 @@ namespace App\Commands\OpenClosed\Refactored;
 use LaravelZero\Framework\Commands\Command;
 
 /**
- * class StorePokemonRawCommand
+ * class StorePokemonWrongCommand
  */
 class AttackPokemonRefactorCommand extends Command
 {
@@ -39,6 +39,7 @@ class AttackPokemonRefactorCommand extends Command
             new TypeFire("Flareon"),
             new TypeElectric("Jolteon"),
             new TypeWater("Vaporeon"),
+            new TypeGhost("Hunter"),
         ]);
 
         foreach ($attacks as $attack) {
