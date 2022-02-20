@@ -21,7 +21,7 @@ class StorePokemonRefactoredCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Single Responsability - Al guardar el registro de un pokemon, debemos generar un log. Versión refactorizada';
+    protected $description = 'Ejemplo que aplica el principio de responsabilidad única';
 
     /**
      * En esta versión, la clase Pokemon solo se encarga de definir al objeto.
