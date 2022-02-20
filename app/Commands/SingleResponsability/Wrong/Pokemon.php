@@ -70,7 +70,8 @@ class Pokemon
 	}
 
 	/**
-	 * Guarda los datos del pokemon en la base de datos y genera un log
+	 * Guarda los datos del pokemon en la base de datos y genera un log.
+	 * Al cambiar de driver de base de datos e implementar otros métodos esta clase tendría cambios por estar acoplado.
 	 * @return void
 	 */
 	public function saveData()
