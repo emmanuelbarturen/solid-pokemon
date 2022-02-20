@@ -22,7 +22,9 @@
         "illuminate/http": "^8.0",
         "illuminate/log": "^8.0",
         "laravel-zero/framework": "^8.8",
-      "ext-json": "*"
+      "ext-json": "*",
+	  "ext-sqlite": "*",
+        "ext-sqlite3": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

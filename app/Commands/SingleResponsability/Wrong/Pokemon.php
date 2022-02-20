@@ -3,6 +3,7 @@
 namespace App\Commands\SingleResponsability\Wrong;
 
 use Illuminate\Support\Facades\DB;
+use SQLite3;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
 /**
@@ -74,12 +75,9 @@ class Pokemon
 	 */
 	public function saveData()
 	{
-		# Guardando en la base de datos
-		DB::table('sp_pokemon')->insert([
-			'name' => $this->getName(),
-			'type' => $this->getType(),
-			'evolutions' => implode(',', $this->getEvolutions())
-		]);
+		$conn = new SQLite3(database_path('database.sqlite'));
+		$evolutions = implode(',', $this->getEvolutions());
+		$conn->exec("insert into sp_pokemon (name, type, evolutions) values ('{$this->getName()}', '{$this->getName()}', '{$evolutions}')");
 
 		# Generando el log
 		$out = new ConsoleOutput();

@@ -2,7 +2,6 @@
 
 namespace App\Commands\SingleResponsability\Wrong;
 
-use App\Commands\SingleResponsability\Wrong\Pokemon;
 use LaravelZero\Framework\Commands\Command;
 
 /**
