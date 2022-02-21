@@ -14,14 +14,14 @@ class AttackPokemonRefactorCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'ocp:attack-pokemon-refactored';
+    protected $signature = 'open-close:attack-pokemon-refactored';
 
     /**
      * The description of the command.
      *
      * @var string
      */
-    protected $description = 'Open/Close Attack Pokemon Refactored';
+    protected $description = 'Ejemplo que aplica el principio Abierto/Cerrado';
 
     /**
      * En esta versión, la función allPokemonAttack no se modifica, ya que todas las clases y subclases que ingresan al array deben
