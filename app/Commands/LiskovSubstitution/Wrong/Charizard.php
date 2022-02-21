@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Commands\LiskovSubstitution\Raw;
+namespace App\Commands\LiskovSubstitution\Wrong;
 
 /**
  * class Charizar
