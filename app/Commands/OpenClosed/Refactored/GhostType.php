@@ -3,9 +3,9 @@
 namespace App\Commands\OpenClosed\Refactored;
 
 /**
- * class TypeElectric
+ * class GhostType
  */
-class TypeElectric extends Pokemon
+class GhostType extends Pokemon
 {
 
     /**
@@ -13,7 +13,7 @@ class TypeElectric extends Pokemon
      */
     public function __construct(string $name)
     {
-        parent::__construct($name, 'Electric');
+        parent::__construct($name, 'Ghost');
     }
 
     /**
@@ -21,7 +21,7 @@ class TypeElectric extends Pokemon
      */
     public function getAttack(): string
     {
-        return $this->getName() . ' ➜ Impactrueno ⚡️';
+        return $this->getName() . ' ➜ Dream Eater';
     }
 
 }

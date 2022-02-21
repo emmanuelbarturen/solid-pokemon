@@ -36,10 +36,12 @@ class AttackPokemonRefactorCommand extends Command
 
         // invocamos al método allPokemonAttack y enviamos las instancia de la clase pokemon
         $attacks = $processAttack->allPokemonAttack([
-            new TypeFire("Flareon"),
-            new TypeElectric("Jolteon"),
-            new TypeWater("Vaporeon"),
-            new TypeGhost("Hunter"),
+            new FireType("Flareon"),
+            new ElectricType("Jolteon"),
+            new WaterType("Vaporeon"),
+            new GhostType("Hunter"),
+            new PoisonType("Ekans"),
+            new BugType("Butterfree")
         ]);
 
         foreach ($attacks as $attack) {

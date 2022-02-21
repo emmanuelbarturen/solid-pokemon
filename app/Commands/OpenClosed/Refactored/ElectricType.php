@@ -3,9 +3,9 @@
 namespace App\Commands\OpenClosed\Refactored;
 
 /**
- * class TypeWater
+ * class TypeElectric
  */
-class TypeWater extends Pokemon
+class ElectricType extends Pokemon
 {
 
     /**
@@ -13,7 +13,7 @@ class TypeWater extends Pokemon
      */
     public function __construct(string $name)
     {
-        parent::__construct($name, 'Water');
+        parent::__construct($name, 'Electric');
     }
 
     /**
@@ -21,6 +21,7 @@ class TypeWater extends Pokemon
      */
     public function getAttack(): string
     {
-        return $this->getName() . ' ➜ Pitsola de agua 🔫💦';
+        return $this->getName() . ' ➜ Impactrueno ⚡️';
     }
+
 }
