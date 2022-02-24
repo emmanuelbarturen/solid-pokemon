@@ -31,7 +31,7 @@ class StorePokemonWrongCommand extends Command
 	public function handle()
 	{
 		// Creamos la instancia de la clase pokemon y guardamos
-		$pokemon = new Pokemon("Eevee", "normal", ["Jolteon", "Vaporeon", "Flareon"]);
+		$pokemon = new Pokemon("pikachu", "electric", ["Raichu"]);
 		$pokemon->saveData();
 		$this->info("✅ Clase Pokemón define attributos");
 		$this->info("✅ Clase Pokemón permite el acceso a los atributos");

@@ -31,7 +31,7 @@ class StorePokemonRefactoredCommand extends Command
     public function handle()
     {
         // Creamos la instancia de la clase pokemon
-        $pokemon = new Pokemon("Eevee", "normal", ["Jolteon", "Vaporeon", "Flareon"]);
+	    $pokemon = new Pokemon("pikachu", "electric", ["Raichu"]);
 
         // Utiliza una clase que contiene la responsabilidad de guardar en la base de datos
         $db = new Database($pokemon);
