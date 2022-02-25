@@ -24,7 +24,7 @@ class MovePokemonWrongCommand extends Command
 	protected $description = 'Interface Segregation move pokemon';
 
 	/**
-	 * La interfaz MoveInterface fue creada a partir de una implementación (Mew) y no de un rol o cliente y obliga a sus clases
+	 * La interfaz MoveInterface fue creada a partir de una implementación y no de un rol o cliente y obliga a sus clases
 	 * implementar métodos que no son necesarios. Las interfaces no deberían ser tan genéricas y deben tener un rol bien definido.
 	 * Esto viola el principio de segregación de interfaces.
 	 * @return void
@@ -36,17 +36,14 @@ class MovePokemonWrongCommand extends Command
 		$this->error('❌ Las subclases pueden ser afectadas por los métodos que no utilizan');
 
 		$gyarados = new Gyarados();
-		$this->info($gyarados->canFly());
-		$this->info($gyarados->canSwim());
-
 		$charizard = new Charizard();
-		$this->info($charizard->canFly());
-		$this->info($charizard->canSwim());
-
 		$blastoise = new Blastoise();
-		$this->info($blastoise->canFly());
-		$this->info($blastoise->canSwim());
 
+		$list = [$gyarados, $charizard, $blastoise];
+		foreach ($list as $pokemon) {
+			$this->info($pokemon->canFly());
+			$this->info($pokemon->canSwim());
+		}
 
 	}
 }

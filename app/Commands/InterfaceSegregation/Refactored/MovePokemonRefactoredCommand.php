@@ -14,7 +14,7 @@ class MovePokemonRefactoredCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'ls:move-pokemon-refactored';
+    protected $signature = 'interface:move-pokemon-refactored';
 
     /**
      * The description of the command.
