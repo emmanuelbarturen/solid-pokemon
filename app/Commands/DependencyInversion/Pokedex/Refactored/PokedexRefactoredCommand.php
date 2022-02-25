@@ -6,9 +6,9 @@ use App\Commands\DependencyInversion\Pokedex\Refactored\Services\PokemonDataServ
 use LaravelZero\Framework\Commands\Command;
 
 /**
- * class PokedexRawCommand
+ * class PokedexRefactoredCommand
  */
-class PokedexWrongCommand extends Command
+class PokedexRefactoredCommand extends Command
 {
     /**
      * The signature of the command.
@@ -22,7 +22,7 @@ class PokedexWrongCommand extends Command
      *
      * @var string
      */
-    protected $description = '';
+    protected $description = 'Dependency inversion: Pokedex refactored example';
 
     /**
      *

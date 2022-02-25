@@ -5,7 +5,7 @@ namespace App\Commands\DependencyInversion\Pokedex\Wrong;
 use LaravelZero\Framework\Commands\Command;
 
 /**
- * class PokedexRawCommand
+ * class PokedexWrongCommand
  */
 class PokedexWrongCommand extends Command
 {
@@ -21,7 +21,7 @@ class PokedexWrongCommand extends Command
      *
      * @var string
      */
-    protected $description = '';
+    protected $description = 'Dependency inversion: Pokedex wrong example';
 
     /**
      *
