@@ -3,7 +3,7 @@
 ## Baseline
 
 El siguiente paso en el metaverso pokémon es implementar ataques a cada pokémon. En primera instancia sólo necesitamos
-los 4 tipos básicos. Fuego, Agua, Eléctrico,
+los 4 tipos básicos. Fuego, Agua, Eléctrico.
 
 ## Upgrade
 
