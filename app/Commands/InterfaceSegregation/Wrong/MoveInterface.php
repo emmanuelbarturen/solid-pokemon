@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Commands\InterfaceSegregation\Raw;
+namespace App\Commands\InterfaceSegregation\Wrong;
 
 /**
  * interface MoveInterface

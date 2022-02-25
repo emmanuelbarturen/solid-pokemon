@@ -15,7 +15,7 @@ class StorePokemonRefactoredCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'di:improve-store-pokemon';
+    protected $signature = 'dependency:improve-store-pokemon';
 
     /**
      * The description of the command.

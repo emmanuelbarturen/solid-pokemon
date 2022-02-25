@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Commands\DependencyInversion\Pokedex\Raw;
+namespace App\Commands\DependencyInversion\Pokedex\Wrong;
 
 /**
  * class Pokedex
